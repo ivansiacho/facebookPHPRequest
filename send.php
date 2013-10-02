@@ -7,7 +7,7 @@ $nombrefoto=$_POST['foto'];
 $puesto=$_POST['puesto'];
 $comentario=$_POST['comentario'];
 //$ruta=$_FILES['foto']['tmp_name'];
-$color = array("color1","color2","color3","color4","color5","color6","color7","color8","color9");
+$color = array("equipo1","equipo2","equipo3","equipo4","equipo5","equipo6","equipo7","equipo8","equipo9");
 $colsel = rand(0,8);
 $colorselected = $color[$colsel];
 
@@ -40,7 +40,7 @@ $consult_data = mysql_query("SELECT * FROM `users` WHERE email = '$email' or pue
  $consult_ganador =  mysql_query("SELECT * FROM `ganadores` WHERE puesto_ganador = '$puesto'");    
  	if((mysql_num_rows($consult_ganador)>0)){
 	  mysql_query("UPDATE users SET ganador = 1 WHERE puesto = '$puesto'");	
-      /*echo '<div class="winner_dialog">Felicidades '.$nombre.' <img src="'.$nombrefoto.'" width="50" height="50" /> <div class="winner_kit">Haz ganado un grandioso kit que te ofrece el Politécnico Grancolombiano</div><div class="condicion_advice">Recuerda llevar tu docmuento No '.$documento.' para confirmar tu premio.</div><input class="reload" type="button" onClick="window.location.reload();" value="Aceptar" /></div>';*/
+     
 	  ?>
       	  	<div class="info-participante">           	
             	<div class="datos-puesto">
@@ -48,7 +48,7 @@ $consult_data = mysql_query("SELECT * FROM `users` WHERE email = '$email' or pue
                     	<div class="foto">
                     		<img src="<?php echo $nombrefoto ?>" width="63" height="63" />
             			</div><!-- /foto -->
-            			¡Felicitaciones <span class="name_select <?php echo $colorselected ?>"><?php echo $nombre ?></span> igresaste al equipo <span class="color_select planet">PLANET!</span>
+            			¡Felicitaciones <span class="name_select <?php echo $colorselected ?>"><?php echo $nombre ?></span> ingresaste al equipo <span class="color_select planet">PLANET!</span>
             		</div><!-- /lugar-puesto -->
             		<div class="texto-complemento">
             				Haz click en aceptar para observar tu puesto y tus compañeros de equipo
@@ -77,7 +77,7 @@ $consult_data = mysql_query("SELECT * FROM `users` WHERE email = '$email' or pue
       <?php
  	}
     else{ 
-	  /*echo '<div class="winner_dialog">Que mala suerte '.$nombre.' <img src="'.$nombrefoto.'" width="50" height="50" /> <div class="advice_kit">Tu silla elegida no fue premiada</div><input class="reload" type="button" onClick="window.location.reload();" value="Aceptar" /></div>';*/
+	 
 	  ?>
       <div class="info-participante">
             	<div class="datos-puesto">
