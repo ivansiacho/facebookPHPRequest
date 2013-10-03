@@ -96,8 +96,12 @@
 <h1 class="title"><img src="img/logo-globant.jpg" alt="Globant we are ready" /></h1>
 <div class="puestos_container">
 	<?php   	
-			for($i=1; $i<=98;$i++){ 
+			for($i=1; $i<=110;$i++){ 
+			if($i==29){
+				echo '<div class="globant_advice"><img src="img/advice-globant.jpg" alt="We create innovative software products that appeal to global audiences." /></div>';
+			}
     ?>
+    	
             <div class="puesto" id="p<?php echo $i?>"></div>
     <?php } ?>
     <div class="clear"></div>
